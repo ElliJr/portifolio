@@ -28,6 +28,7 @@ main {
 .container {
     width: 80%;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .about, .projects, .contact {
@@ -40,7 +41,12 @@ h2 {
     display: inline-block;
     padding-bottom: 5px;
 }
-
+h {
+    color: #00aaff;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
 .project {
     margin: 20px 0;
 }
@@ -49,14 +55,11 @@ h2 {
     color: #00aaff;
 }
 
-a {
-    color: #00aaff;
+.icones{
+    color: #ffffff;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 .profile-image {
     text-align: center;
@@ -64,18 +67,46 @@ a:hover {
 }
 
 .profile-image img {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     border: 2px solid #00aaff;
 }
-
+.envolver{
+    display: flex;
+}
 footer {
     background-color: #1c1c1c;
     padding: 10px 0;
     text-align: center;
 }
-
+.X{
+    position: relative;
+    top: -10px;
+}
+.primeiraArea{
+    margin: 12px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.area1{
+    margin: 5px;
+    padding: 2px;
+    display: inline-flex;
+}
+a{
+ text-decoration: none;
+ color: white;
+}
 footer p {
     margin: 0;
+}
+@media (max-width:517px) {
+    .envolver{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center ;
+    }
 }
