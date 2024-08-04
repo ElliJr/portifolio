@@ -1,10 +1,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-image: url("https://i.pinimg.com/originals/59/94/b5/5994b5a21eadaf45cef834aba2c7e262.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1710px;
     color: #ffffff;
 }
-
+.backdropp{
+    backdrop-filter: blur(7px);
+}
 header {
     background-color: #1c1c1c;
     padding: 20px 0;
