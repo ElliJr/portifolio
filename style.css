@@ -93,6 +93,8 @@ footer {
     top: -10px;
 }
 .primeiraArea{
+    background-color: #1c1c1c;
+    border-radius: 12px;
     margin: 12px;
     padding: 12px;
     display: flex;
@@ -106,7 +108,10 @@ footer {
 }
 a{
  text-decoration: none;
- color: white;
+ color: rgb(255, 255, 255);
+}
+a:hover{
+    text-decoration: underline white;
 }
 footer p {
     margin: 0;
