@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,6 +7,9 @@ body {
     background-position: center;
     background-size: 1710px;
     color: #ffffff;
+}
+.efeito-txt-animado{
+    visibility: hidden;
 }
 .backdropp{
     backdrop-filter: blur(7px);
