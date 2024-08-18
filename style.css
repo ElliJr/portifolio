@@ -128,7 +128,7 @@ footer p {
 }
 @media (max-width:517px) {
     .envolver{
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         justify-content: center;
         align-items: center ;
     }
