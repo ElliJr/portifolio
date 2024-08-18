@@ -112,10 +112,10 @@ footer {
 }
 a{
  text-decoration: none;
- color: rgb(255, 255, 255);
+ color: blue;
 }
 a:hover{
-    text-decoration: underline white;
+    text-decoration: underline blue;
 }
 footer p {
     margin: 0;
