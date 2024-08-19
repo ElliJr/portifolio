@@ -7,6 +7,7 @@ body {
     background-position: center;
     background-size: 1710px;
     color: #ffffff;
+    background-attachment: fixed;
 }
 .efeito-txt-animado{
     visibility: hidden;
@@ -19,10 +20,8 @@ header {
     padding: 20px 0;
     text-align: center;
 }
-
-header h1 {
+header, h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 img{
     justify-content: center;
@@ -110,15 +109,12 @@ footer {
     padding: 2px;
     display: inline-flex;
 }
-a{
- text-decoration: none;
- color: rgb(255, 255, 255);
-}
-a:hover{
-    text-decoration: underline white;
-}
 footer p {
     margin: 0;
+}
+a{
+    color: blue;
+    text-decoration: underline;
 }
 @media (max-width:517px) {
     .envolver{
