@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+
 
 body {
     margin: 0;
@@ -20,7 +22,12 @@ header {
     padding: 20px 0;
     text-align: center;
 }
-header, h1 {
+.h3{
+  font-family: "Matemasie", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header h1 {
     margin: 0;
 }
 img{
@@ -109,6 +116,13 @@ footer {
     padding: 2px;
     display: inline-flex;
 }
+a{
+ text-decoration: none;
+ color: blue;
+}
+a:hover{
+    text-decoration: underline blue;
+}
 footer p {
     margin: 0;
 }
@@ -118,7 +132,7 @@ a{
 }
 @media (max-width:517px) {
     .envolver{
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         justify-content: center;
         align-items: center ;
     }
