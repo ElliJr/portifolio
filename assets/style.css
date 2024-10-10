@@ -10,12 +10,12 @@ body {
     background-size: 1710px;
     color: #ffffff;
     background-attachment: fixed;
+    backdrop-filter: blur(7px);
 }
 .efeito-txt-animado{
     visibility: hidden;
 }
 .backdropp{
-    backdrop-filter: blur(7px);
 }
 header {
     background-color: #1c1c1c;
@@ -69,6 +69,12 @@ h {
     margin: 20px 0;
 }
 
+.img-coffe{
+    border-radius: 12px;
+}
+.img-engenharia{
+    border-radius: 12px;
+}
 .project h3 {
     color: #00aaff;
 }
