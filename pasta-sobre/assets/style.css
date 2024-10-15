@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    padding: 12px;
+    width: auto;
+    background-color: aqua;
+}
+
+ul{
+    list-style: none;
+}

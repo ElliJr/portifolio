@@ -1,145 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("https://i.pinimg.com/originals/59/94/b5/5994b5a21eadaf45cef834aba2c7e262.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1710px;
-    color: #ffffff;
-    background-attachment: fixed;
-    backdrop-filter: blur(7px);
-}
-.efeito-txt-animado{
-    visibility: hidden;
-}
-.backdropp{
-}
-header {
-    background-color: #1c1c1c;
-    padding: 20px 0;
-    text-align: center;
-}
-.h3{
-  font-family: "Matemasie", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-header h1 {
-    margin: 0;
-}
-img{
-    justify-content: center;
-    align-items: center;
-}
-header p {
-    margin: 5px 0 0;
-    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
 }
 
-main {
-    padding: 20px 0;
+header, footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0f0;
+}
+
+p {
+    color: #ccc;
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
+    padding: 2rem;
 }
 
+.alinhar{
+    display: flex;
+    flex-direction: row;
+}
 .about, .projects, .contact {
-    margin: 40px 0;
+    padding: 3rem 0;
 }
 
-h2 {
-    color: #00aaff;
-    border-bottom: 2px solid #00aaff;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-h {
-    color: #00aaff;
-    border-bottom: 2px solid #00aaff;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-.project {
-    margin: 20px 0;
-}
-
-.img-coffe{
-    border-radius: 12px;
-}
-.img-engenharia{
-    border-radius: 12px;
-}
-.project h3 {
-    color: #00aaff;
-}
-
-.icones{
-    color: #ffffff;
+a {
+    color: #0f0;
     text-decoration: none;
 }
 
-
-.profile-image {
-    text-align: center;
-    margin: 20px 0;
+.project img {
+    transition: transform 0.3s ease;
 }
-
-.profile-image img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    border: 2px solid #00aaff;
-}
-.envolver{
-    display: flex;
-}
-footer {
-    background-color: #1c1c1c;
-    padding: 10px 0;
-    text-align: center;
-}
-.X{
-    position: relative;
-    top: -10px;
-}
-.primeiraArea{
-    background-color: #1c1c1c;
+img{
     border-radius: 12px;
-    margin: 12px;
-    padding: 12px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
-.area1{
-    margin: 5px;
-    padding: 2px;
-    display: inline-flex;
+.project img:hover {
+    transform: scale(1.05);
 }
-a{
- text-decoration: none;
- color: blue;
+
+/* Estilos do menu lateral */
+.sidebar {
+    position: fixed;  /* Fixa o menu na lateral da tela */
+    top: 0;
+    left: 0;
+    width: 200px;     /* Largura do menu */
+    height: 100%;     /* Ocupa toda a altura da tela */
+    background-color: #333;  /* Cor de fundo escura */
+    color: white;     /* Cor do texto */
+    padding: 20px;
+    box-sizing: border-box;
 }
-a:hover{
-    text-decoration: underline blue;
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    color: #00ff00;   /* Verde neon */
+    margin-bottom: 10px;
 }
-footer p {
+
+.sidebar p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;  /* Animação de transição ao passar o mouse */
+}
+
+.sidebar ul li a:hover {
+    color: #00ff00;   /* Muda para verde neon ao passar o mouse */
+}
+
+/* Ajusta o conteúdo principal para não ficar sob o menu */
+main {
+    margin-left: 220px;  /* Cria um espaço à esquerda para não sobrepor o menu */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px; /* Espaçamento entre as seções */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-a{
-    color: blue;
-    text-decoration: underline;
+
+img {
+    max-width: 100%;
+    height: auto;
 }
-@media (max-width:517px) {
-    .envolver{
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-        align-items: center ;
+
+/* Scroll reveal */
+.reveal {
+    visibility: hidden;
+}
+.reveal.visible {
+    visibility: visible;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
