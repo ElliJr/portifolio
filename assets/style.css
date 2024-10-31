@@ -57,9 +57,18 @@ p {
 }
 .project{
     padding: 18px;
-    
-    
 }
+.profile-image{
+    border-radius: 50%;
+    width: 580px;
+    position: center;
+    border: 2px solid rgb(10, 207, 10);
+}
+.minha-imagem{
+    height: 300px;
+    border-radius: 900%;
+}
+
 a {
     color: #0f0;
     text-decoration: none;
