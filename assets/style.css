@@ -89,7 +89,7 @@ img{
     position: fixed;  /* Fixa o menu na lateral da tela */
     top: 0;
     left: -115px;
-    width: 130px;
+    width: 150px;
     height: 130px;    /* Ocupa toda a altura da tela */
     background-color: #3333335b;  /* Cor de fundo escura */
     backdrop-filter: blur(5px);
