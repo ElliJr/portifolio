@@ -5,15 +5,18 @@
 }
 
 body {
+    background-image: url("img/DALL·E\ 2024-10-31\ 15.17.07\ -\ A\ sophisticated\,\ minimalistic\ background\ image\ with\ subtle\ geometric\ patterns\ in\ shades\ of\ black\ and\ gray\,\ designed\ to\ blend\ with\ a\ dark-themed\ websit.webp");
+    background-repeat: no-repeat no-repeat;
+    background-attachment: fixed;
     font-family: 'Arial', sans-serif;
-    background-color: #111;
     color: #fff;
 }
 
 header, footer {
-    background-color: #333;
+    background-color: #3333336c;
     text-align: center;
     padding: 1rem;
+    margin: 3px;
 }
 
 .nome-autor {
@@ -38,7 +41,11 @@ p {
 .about, .projects, .contact {
     padding: 3rem 0;
 }
-
+.project{
+    padding: 18px;
+    
+    
+}
 a {
     color: #0f0;
     text-decoration: none;
@@ -61,7 +68,8 @@ img{
     left: 0;
     width: 130px;
     height: 130px;    /* Ocupa toda a altura da tela */
-    background-color: #333;  /* Cor de fundo escura */
+    background-color: #3333335b;  /* Cor de fundo escura */
+    backdrop-filter: blur(5px);
     color: white;     /* Cor do texto */
     padding: 20px;
     box-sizing: border-box;
@@ -110,7 +118,11 @@ main {
 section {
     margin-bottom: 50px; /* Espaçamento entre as seções */
 }
-
+.flex-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 section h2 {
     font-size: 2rem;
     color: #00ff00;
