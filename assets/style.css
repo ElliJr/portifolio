@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined{
+    position: relative;
+    top: 32px;
+    left: 20px;
+}
+
+
 body {
     background-image: url("img/DALL·E\ 2024-10-31\ 15.17.07\ -\ A\ sophisticated\,\ minimalistic\ background\ image\ with\ subtle\ geometric\ patterns\ in\ shades\ of\ black\ and\ gray\,\ designed\ to\ blend\ with\ a\ dark-themed\ websit.webp");
     background-repeat: no-repeat no-repeat;
@@ -65,7 +79,7 @@ img{
 .sidebar {
     position: fixed;  /* Fixa o menu na lateral da tela */
     top: 0;
-    left: 0;
+    left: -115px;
     width: 130px;
     height: 130px;    /* Ocupa toda a altura da tela */
     background-color: #3333335b;  /* Cor de fundo escura */
@@ -75,8 +89,13 @@ img{
     box-sizing: border-box;
     border-radius: 0px 10px 10px 0px ;
     box-shadow: 2px 2px 12px 3px  black; 
+    transition: 1s;
+    display: flex;
 }
-
+.sidebar:hover{
+    transition: 1s;
+    left: 0;
+}
 .sidebar h1 {
     font-size: 1.5rem;
     color: #00ff00;   /* Verde neon */
