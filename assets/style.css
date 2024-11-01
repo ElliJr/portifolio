@@ -189,6 +189,9 @@ section h2 {
 
 }
 .imagem-disaines{
+    
+    border-radius: 12px;
+    margin: 23px;
     transition: 1s;
 }
 .imagem-disaines:hover{
