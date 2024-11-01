@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+html ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  html ::-webkit-scrollbar-thumb {
+    border-radius: 11px;
+    background: rgba(0, 255, 0, 0.432);;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: inherit;
+    background-image: url("img/156198-codigo_binario-nmero_binario-data-verde-patron-1366x768.jpg");
+  }
+  
+  html ::-webkit-scrollbar-track {
+
+  }
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -13,11 +29,16 @@
 }
 .material-symbols-outlined{
     position: relative;
-    top: 32px;
-    left: 20px;
+    top: 70px;
+    left: -10px;
+    transform: rotateZ(90deg);
+    cursor: pointer;
 }
 
+body{
+    cursor: url("img/cursor.png"), auto ;
 
+}
 body {
     background-image: url("img/DALL·E\ 2024-10-31\ 15.17.07\ -\ A\ sophisticated\,\ minimalistic\ background\ image\ with\ subtle\ geometric\ patterns\ in\ shades\ of\ black\ and\ gray\,\ designed\ to\ blend\ with\ a\ dark-themed\ websit.webp");
     background-repeat: no-repeat no-repeat;
@@ -34,8 +55,19 @@ header, footer {
 }
 
 .nome-autor {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
     color: #0f0;
+}
+.subtitle{
+    font-size: 2.0rem;
+}
+.nome-autor, .subtitle{
+    background-image: url("img/156198-codigo_binario-nmero_binario-data-verde-patron-1366x768.jpg");
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: left center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;  
 }
 
 p {
@@ -86,10 +118,9 @@ img{
 /* Estilos do menu lateral */
 .sidebar {
     position: fixed;  /* Fixa o menu na lateral da tela */
-    top: 0;
-    left: -115px;
-    width: 150px;
-    height: 130px;    /* Ocupa toda a altura da tela */
+    top: -196px;
+    width: 180px;
+    /* Ocupa toda a altura da tela */
     background-color: #3333335b;  /* Cor de fundo escura */
     backdrop-filter: blur(5px);
     color: white;     /* Cor do texto */
@@ -99,10 +130,11 @@ img{
     box-shadow: 2px 2px 12px 3px  black; 
     transition: 1s;
     display: flex;
+    flex-direction: column;
 }
 .sidebar:hover{
     transition: 1s;
-    left: 0;
+    top: 0;
 }
 .sidebar h1 {
     font-size: 1.5rem;
