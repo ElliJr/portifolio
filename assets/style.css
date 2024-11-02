@@ -47,7 +47,6 @@ body {
 }
 
 header, footer {
-    background-color: #3333336c;
     text-align: center;
     padding: 1rem;
     margin: 3px;
@@ -201,6 +200,7 @@ section h2 {
 .text-desaines{
     text-align: center;
     margin: 20px;
+    font-size: 50px;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
@@ -212,9 +212,9 @@ section h2 {
     transition: 1s;
 }
 .imagem-disaines:hover{
-    transition: 1s;
+    transition: 1s ease;
     transform: rotateZ(19deg);
-    cursor: pointer;
+    cursor: pointer;  
 }
 .container_disaines{
     text-align: center;
@@ -223,7 +223,6 @@ section h2 {
     backdrop-filter: blur(8px);
     margin: 34px;
     border-radius: 12px;
-
 }
 
 /* Estilos gerais */
@@ -262,7 +261,8 @@ img {
 @media (max-width: 1000px) {
     .container_disaines{
         flex-wrap: wrap;
-    }
+    }column-width: ;
+
     .alinhar{
         flex-wrap: wrap;
     }
