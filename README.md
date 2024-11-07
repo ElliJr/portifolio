@@ -25,4 +25,3 @@ Contato
 Email: ellijuniorsantosdejesus8@gmail.com.br
 LinkedIn: Elli Junior
 Instagram: elli.kun
-X: elli_JRs
