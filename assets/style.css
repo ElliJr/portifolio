@@ -108,6 +108,9 @@ h3{
 .minha-imagem{
     height: 300px;
     border-radius: 900%;
+    position: relative;
+    top: 10px;
+    position: sticky;
 }
 
 a {
@@ -261,7 +264,7 @@ img {
 @media (max-width: 1000px) {
     .container_disaines{
         flex-wrap: wrap;
-    }column-width: ;
+    }
 
     .alinhar{
         flex-wrap: wrap;
