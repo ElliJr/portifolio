@@ -98,6 +98,11 @@ h3{
 }
 .project{
     padding: 18px;
+    transition: 1s;
+}
+.project:hover{
+    transition: 1s;
+    transform: scale(1.1);
 }
 .profile-image{
     border-radius: 50%;
