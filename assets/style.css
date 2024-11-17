@@ -253,36 +253,75 @@ img {
     }
 }
 
-@media (max-width: 1000px) {
-    .container_disaines{
-        flex-wrap: wrap;
-    }
+/* Estilos existentes... */
 
-    .alinhar{
-        flex-wrap: wrap;
+/* Responsividade - usando media queries */
+@media (max-width: 1200px) { /* Largura máxima de 1200px */
+    .container {
+      padding: 1rem; /* Reduz o padding da container */
     }
-}
-@media (max-width: 480px) {
-    .sidebar h1 {
-        font-size: 1rem;
+    .alinhar {
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      align-items: center; /* Centraliza os itens */
+    }
+    .profile-image {
+      margin-bottom: 1rem; /* Espaço entre a imagem e o texto */
+    }
+    .flex-projects {
+      flex-direction: column; /* Projetos em coluna */
+      align-items: center; /* Centraliza os projetos */
+    }
+    .project {
+      margin-bottom: 1rem; /* Espaço entre os projetos */
+    }
+      .container_disaines{
+          flex-direction: column;
+      }
+      .imagem-disaines{
+          width: 100px;
+          margin: 10px;
+      }
+  }
+  
+  @media (max-width: 768px) { /* Largura máxima de 768px (tablets) */
+    .nome-autor {
+      font-size: 3rem; /* Reduz o tamanho da fonte do título */
+    }
+    .subtitle {
+      font-size: 1.5rem; /* Reduz o tamanho da fonte do subtítulo */
+    }
+      .sidebar {
+          width: 100%;
+          left: 0;
+          top: -60;
+          border-radius: 0px;
+          box-shadow:none;
+      }
+      main{
+          margin-left:0;
+      }
+  
+  }
+  
+  @media (max-width: 480px) { /* Largura máxima de 480px (smartphones) */
+    .nome-autor {
+      font-size: 2rem; /* Reduz ainda mais o tamanho da fonte do título */
+    }
+    .subtitle {
+      font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do subtítulo */
+    }
+    main {
+      margin-left: 0; /* Remove a margem esquerda */
     }
     .sidebar ul li a {
-        font-size: 0.9rem;
+      font-size: 0.9rem; /* Diminui tamanho da fonte */
     }
-
-    section h2 {
-        font-size: 1.2rem;
+    section h2{
+      font-size: 1.5rem;
     }
-
-    main {
-        padding: 5px;
-    }
-}
-
-
-
-
-
+  }
+  
+  /* ... outros estilos ... */
 
 /* From Uiverse.io by wilsondesouza */ 
 ul {

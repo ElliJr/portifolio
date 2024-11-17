@@ -7,7 +7,6 @@
     <meta name="description" content="Portfólio de Elli Junior, desenvolvedor web especializado em HTML, CSS, JavaScript e na criação de websites e aplicações inovadoras.">
     <meta name="keywords" content="Portfólio, Desenvolvimento Web, HTML, CSS, JavaScript, Git, Sites, Aplicações Web, Elli Junior santos de jesus">
     <meta name="author" content="Elli Junior">
-    <title>Elli Junior | Desenvolvedor Web</title>
     <!-- SEO Social Media Integration -->
     <meta property="og:title" content="Elli Junior - Desenvolvedor Web">
     <meta property="og:description" content="Conheça os projetos e habilidades de Elli Junior, um desenvolvedor web com experiência em HTML, CSS e JavaScript.">
@@ -22,6 +21,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/css/loader.css">
     <link rel="stylesheet" href="https://unpkg.com/scrollreveal"></link>
+    <title>Elli Junior | Desenvolvedor Web</title>
 </head>
 <body>
     <aside class="sidebar">
@@ -138,10 +138,11 @@
                     <ul class="example-2">
                       <li class="icon-content">
                         <a
-                          href="https://linkedin.com/"
+                          href="https://www.linkedin.com/in/elli-junior-3a37622b8/"
                           aria-label="LinkedIn"
                           data-social="linkedin"
                           rel="noopener noreferrer"
+                          target="_blank"
                         >
                           <div class="filled"></div>
                           <svg
@@ -166,6 +167,7 @@
                            aria-label="GitHub" 
                            data-social="github"  
                            rel="noopener noreferrer"
+                           target="_blank"
                            >
                           <div class="filled"></div>
                           <svg
@@ -191,6 +193,7 @@
                           aria-label="Instagram"
                           data-social="instagram"
                           rel="noopener noreferrer"
+                          target="_blank"
                         >
                           <div class="filled"></div>
                           <svg
@@ -224,7 +227,45 @@
                 <p>&copy; 2024 <a href="https://github.com/ElliJr">ElliJr</a>.  </p>
             </div>
         </footer>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js">
+      // Configurações do ScrollReveal
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    reset: true,
+    origin: 'bottom',
+});
+
+// Animações para as seções
+sr.reveal('.about', {
+    duration: 2000,
+    delay: 200,
+});
+sr.reveal('.projects', {
+    duration: 2000,
+    delay: 400,
+});
+sr.reveal('.disaines', {
+    duration: 2000,
+    delay: 600,
+});
+sr.reveal('.contact', {
+    duration: 2000,
+    delay: 800,
+});
+
+// Animação para imagens dos projetos (hover)
+const projectImages = document.querySelectorAll('.project img');
+projectImages.forEach(img => {
+    img.addEventListener('mouseover', () => {
+        img.style.transform = 'scale(1.05)';
+    });
+    img.addEventListener('mouseout', () => {
+        img.style.transform = 'scale(1)';
+    });
+});
+    </script>
     <script src="assets/css/js/main.js"></script>
 </body>
 </html>
