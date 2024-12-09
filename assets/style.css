@@ -212,6 +212,8 @@ section h2 {
     cursor: pointer;  
 }
 .container_disaines{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
     width: auto;
