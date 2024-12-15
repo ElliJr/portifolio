@@ -54,7 +54,18 @@ header, footer {
     padding: 1rem;
     margin: 3px;
 }
-
+footer{
+  margin-bottom: 300px;
+}
+.habilidades{
+  text-align: start;
+}
+.habilidades2{
+  position: absolute;
+  left: 10px;
+  padding: 12px;
+  display: flex;
+}
 .nome-autor {
     font-size: 5.5rem;
     color: #0f0;
@@ -202,11 +213,7 @@ section h2 {
     font-weight: 400;
     font-style: normal;
 }
-, :hover{
-    transition: 1s ease;
-    transform: rotateZ(19deg);
-    cursor: pointer;  
-}
+
 .container_disaines{
     display: flex;
     flex-wrap: wrap;
@@ -288,13 +295,6 @@ img {
     .subtitle {
       font-size: 1.5rem; /* Reduz o tamanho da fonte do subtítulo */
     }
-      .sidebar {
-          width: 100%;
-          left: 0;
-          top: -60;
-          border-radius: 0px;
-          box-shadow:none;
-      }
       main{
           margin-left:0;
       }
@@ -418,3 +418,6 @@ ul {
     background-color: #ff0000;
   }
   
+  .ellijr{
+    color: #00ff00;
+  }
