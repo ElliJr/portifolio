@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Honk:MORF@0..45&family=Itim&family=Kalnia+Glaze:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html{
+  height: 100dvh;
+}
 
 * {
     margin: 0;
@@ -108,7 +111,6 @@ h3{
     border-radius: 50%;
     width: 580px;
     position: center;
-    border: 2px solid rgb(10, 207, 10);
 }
 .minha-imagem{
     height: 300px;
@@ -200,13 +202,7 @@ section h2 {
     font-weight: 400;
     font-style: normal;
 }
-.imagem-disaines{
-    width: 230px;
-    border-radius: 12px;
-    margin: 23px;
-    transition: 1s;
-}
-.imagem-disaines:hover{
+, :hover{
     transition: 1s ease;
     transform: rotateZ(19deg);
     cursor: pointer;  
@@ -267,7 +263,7 @@ img {
       align-items: center; /* Centraliza os itens */
     }
     .profile-image {
-      margin-bottom: 1rem; /* Espaço entre a imagem e o texto */
+      width: 300px;
     }
     .flex-projects {
       flex-direction: column; /* Projetos em coluna */
