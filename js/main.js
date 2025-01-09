@@ -1,4 +1,5 @@
-      // Função para mostrar a imagem com a rolagem
+
+    // Função para mostrar a imagem com a rolagem
       window.onscroll = function () {
         const imgContainer = document.getElementById("imgContainer");
 

@@ -1,0 +1,14 @@
+.content {
+    opacity: 0; /* Inicialmente invisível */
+    margin: 50px 0;
+    padding: 20px;
+    background: #282c34;
+    border-radius: 8px;
+    transform: translateY(50px); /* Move para baixo */
+    transition: all 0.6s ease; /* Transição suave */
+  }
+  
+  .content.show {
+    opacity: 1; /* Visível ao rolar */
+    transform: translateY(0); /* Volta à posição original */
+  }
