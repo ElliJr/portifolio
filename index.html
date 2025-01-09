@@ -20,6 +20,7 @@
     <script src="assets/js/json.js"></script>
     <link rel="stylesheet" href="assets/css/img-logo.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scroll-carrosel.css">
     <title>Elli Junior | Desenvolvedor Web</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
             stat_minus_1
             </span>
     </aside>
-        <header>
+        <header id="topo">
             <nav class="container">
                 <h1 class="nome-autor" title="Dev web">&lt;/Elli Junior&gt;</h1>
                 <p class="subtitle" title="Dev web">Desenvolvedor Web</p>
@@ -48,7 +49,7 @@
                     <h2>&lt;Sobre Mim&gt;</h2>
                     <div class="alinhar"> 
                         <div class="envolver">
-                            <h3>Sou um desenvolvedor web com sólida experiência
+                            <h3 class="effect">Sou um desenvolvedor web com sólida experiência
                                 na criação e manutenção de sites e aplicações
                                 web. Domino tecnologias como HTML, CSS e
                                 JavaScript.
@@ -67,13 +68,14 @@
                         </div>
                     </div>
                 </div>
+                <canvas id="waveCanvas"></canvas>
             </section>
-            <section id="projetos" class="projects">
+            <section  id="projetos" class="projects">
                 <div class="container">
                     <h2>&lt;Projetos&gt;</h2>
                     <br>
                     <article class="flex-projects">
-                        <div class="project" class="content">
+                        <div class="project" class="effect" class="content">
                             <h3>Projeto COFFE</h3>
                             <a href="https://ellijr.github.io/COFFE--Site/" target="_blank" rel="noopener noreferrer">
                                 <img src="img/img-coffe.png" alt="imagem do site coffe" width="500px">
@@ -196,6 +198,7 @@
                         <div class="tooltip">Instagram</div>
                       </li>
                     </ul>
+                    <button><a href="#topo">topo</a></button>
                 </div>
             </section>
         <footer>
@@ -212,7 +215,9 @@
                 <p>&copy; 2024 <a class="ellijr" href="https://github.com/ElliJr">ElliJr</a>.  </p>
             </div>
         </footer>
+        <video autoplay muted loop id="video-background" src="assets/css/img2/nebula.3840x2160.mp4"></video>
     <script src="js/main.js"></script>
     <script src="js/json.js"></script>
+    <script src="js/scroll-carrosel.js"></script>
 </body>
 </html>
