@@ -20,7 +20,9 @@
     <script src="assets/js/json.js"></script>
     <link rel="stylesheet" href="assets/css/img-logo.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/scroll-carrosel.css">
+    <!-- <link rel="stylesheet" href="assets/css/scroll.css"> -->
+    <link rel="stylesheet" href="assets/css/balls.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r155/three.min.js"></script>
     <title>Elli Junior | Desenvolvedor Web</title>
 </head>
 <body>
@@ -38,8 +40,8 @@
             stat_minus_1
             </span>
     </aside>
-        <header id="topo">
-            <nav class="container">
+    <header id="topo">
+      <nav class="container">
                 <h1 class="nome-autor" title="Dev web">&lt;/Elli Junior&gt;</h1>
                 <p class="subtitle" title="Dev web">Desenvolvedor Web</p>
             </nav>
@@ -215,9 +217,77 @@
                 <p>&copy; 2024 <a class="ellijr" href="https://github.com/ElliJr">ElliJr</a>.  </p>
             </div>
         </footer>
-        <video autoplay muted loop id="video-background" src="assets/css/img2/nebula.3840x2160.mp4"></video>
+        <script>
+           // Set up the scene, camera, and renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create a light source
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+
+        // Create the character (a simple humanoid figure)
+        const material = new THREE.MeshStandardMaterial({ color: 0x44aa88 });
+
+        // Head
+        const headGeometry = new THREE.SphereGeometry(1, 32, 32);
+        const head = new THREE.Mesh(headGeometry, material);
+        head.position.y = 3;
+        scene.add(head);
+
+        // Body
+        const bodyGeometry = new THREE.CylinderGeometry(1, 1, 2, 32);
+        const body = new THREE.Mesh(bodyGeometry, material);
+        scene.add(body);
+
+        // Arms
+        const armGeometry = new THREE.CylinderGeometry(0.3, 0.3, 2, 32);
+        const leftArm = new THREE.Mesh(armGeometry, material);
+        const rightArm = new THREE.Mesh(armGeometry, material);
+        leftArm.position.set(-1.5, 1.5, 0);
+        leftArm.rotation.z = Math.PI / 4;
+        rightArm.position.set(1.5, 1.5, 0);
+        rightArm.rotation.z = -Math.PI / 4;
+        scene.add(leftArm);
+        scene.add(rightArm);
+
+        // Legs
+        const legGeometry = new THREE.CylinderGeometry(0.4, 0.4, 2, 32);
+        const leftLeg = new THREE.Mesh(legGeometry, material);
+        const rightLeg = new THREE.Mesh(legGeometry, material);
+        leftLeg.position.set(-0.5, -1.5, 0);
+        rightLeg.position.set(0.5, -1.5, 0);
+        scene.add(leftLeg);
+        scene.add(rightLeg);
+
+        // Set camera position
+        camera.position.z = 10;
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            head.rotation.y += 0.01;
+            body.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Adjust canvas size on window resize
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+        </script>
+        <canvas id="spaceCanvas"></canvas>
     <script src="js/main.js"></script>
     <script src="js/json.js"></script>
-    <script src="js/scroll-carrosel.js"></script>
+    <!-- <script src="js/scroll.js"></script> -->
+    <script src="js/balls.js"></script>
 </body>
 </html>

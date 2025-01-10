@@ -51,3 +51,11 @@ window.addEventListener('scroll', updateWave);
 
 // Desenhar a onda inicialmente
 drawWave(0);
+
+
+
+
+
+
+
+

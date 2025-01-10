@@ -71,20 +71,15 @@ footer{
   padding: 12px;
   display: flex;
 }
-.nome-autor {
-    font-size: 5.5rem;
-    color: #0f0;
-}
-.subtitle{
-    font-size: 2.0rem;
-}
 .nome-autor, .subtitle{
-    background-image: url("img2/156198-codigo_binario-nmero_binario-data-verde-patron-1366x768.jpg");
+    /* background-image: url("img2/156198-codigo_binario-nmero_binario-data-verde-patron-1366x768.jpg");
     background-repeat: no-repeat;
     background-size: 1000px;
     background-position: left center;
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;  
+    -webkit-background-clip: text;   */
+    color: #00ff00;
+    font-size: 2.5rem;
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
@@ -267,6 +262,7 @@ img {
       align-items: center; /* Centraliza os projetos */
     }
     .project {
+      width: 400px;
       margin-bottom: 1rem; /* Espaço entre os projetos */
     }
       .container_disaines{
@@ -276,15 +272,15 @@ img {
           width: 100px;
           margin: 10px;
       }
+      .nome-autor {
+        font-size: 2rem; /* Reduz o tamanho da fonte do título */
+      }
+      .subtitle {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do subtítulo */
+      }
   }
   
   @media (max-width: 768px) { /* Largura máxima de 768px (tablets) */
-    .nome-autor {
-      font-size: 3rem; /* Reduz o tamanho da fonte do título */
-    }
-    .subtitle {
-      font-size: 1.5rem; /* Reduz o tamanho da fonte do subtítulo */
-    }
     main{
       margin-left:0;
     }
@@ -296,21 +292,14 @@ img {
       margin-bottom: 330px;
     }
     .nome-autor, .subtitle{
-      text-align: center;
       position: relative;
-      top: 100px;
-      align-items: center;
-      font-size: 50px;
+      right: 100px;
+      bottom: 50px;
+      color: #00ff00;
     }
   }
   
   @media (max-width: 480px) { /* Largura máxima de 480px (smartphones) */
-    .nome-autor {
-      font-size: 2rem; /* Reduz ainda mais o tamanho da fonte do título */
-    }
-    .subtitle {
-      font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do subtítulo */
-    }
     main {
       margin-left: 0; /* Remove a margem esquerda */
     }
