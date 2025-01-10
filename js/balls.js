@@ -69,5 +69,5 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', () => {
-    scrollSpeedFactor = 1 + window.scrollY / 200;
+    scrollSpeedFactor = 1 + window.scrollY / 50;
 });

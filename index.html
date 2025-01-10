@@ -112,11 +112,24 @@
             </section>
             <section id="disaines" class="disaines">
                     <h1 class="text-desaines">Desaines</h1>
-                    <div class="container_disaines" id="desaines">
-                        
-                    </div>
-                    <p>Sou capaz de criar sites responsivos com designs atrativos e inovadores.</p>
-                    </div>
+                 <section class="carousel-section">
+                <div class="carousel-container">
+                  <button class="prev-btn">❮</button>
+                  <div class="carousel">
+                    <div class="carousel-item"><img src="img-disaines/imagem-01.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-02.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-03.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-04.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-05.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-06.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-07.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-08.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-09.png" class="card" alt="imagem desaine"></div>
+                    <div class="carousel-item"><img src="img-disaines/imagem-010.png"class="card" alt="imagem desaine"></div>
+                  </div>
+                  <button class="next-btn">❯</button>
+                </div>
+            </section>
             </section>
             <section id="contato" class="contact">
                 <div class="container">
@@ -217,73 +230,6 @@
                 <p>&copy; 2024 <a class="ellijr" href="https://github.com/ElliJr">ElliJr</a>.  </p>
             </div>
         </footer>
-        <script>
-           // Set up the scene, camera, and renderer
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        // Create a light source
-        const light = new THREE.PointLight(0xffffff, 1, 100);
-        light.position.set(10, 10, 10);
-        scene.add(light);
-
-        // Create the character (a simple humanoid figure)
-        const material = new THREE.MeshStandardMaterial({ color: 0x44aa88 });
-
-        // Head
-        const headGeometry = new THREE.SphereGeometry(1, 32, 32);
-        const head = new THREE.Mesh(headGeometry, material);
-        head.position.y = 3;
-        scene.add(head);
-
-        // Body
-        const bodyGeometry = new THREE.CylinderGeometry(1, 1, 2, 32);
-        const body = new THREE.Mesh(bodyGeometry, material);
-        scene.add(body);
-
-        // Arms
-        const armGeometry = new THREE.CylinderGeometry(0.3, 0.3, 2, 32);
-        const leftArm = new THREE.Mesh(armGeometry, material);
-        const rightArm = new THREE.Mesh(armGeometry, material);
-        leftArm.position.set(-1.5, 1.5, 0);
-        leftArm.rotation.z = Math.PI / 4;
-        rightArm.position.set(1.5, 1.5, 0);
-        rightArm.rotation.z = -Math.PI / 4;
-        scene.add(leftArm);
-        scene.add(rightArm);
-
-        // Legs
-        const legGeometry = new THREE.CylinderGeometry(0.4, 0.4, 2, 32);
-        const leftLeg = new THREE.Mesh(legGeometry, material);
-        const rightLeg = new THREE.Mesh(legGeometry, material);
-        leftLeg.position.set(-0.5, -1.5, 0);
-        rightLeg.position.set(0.5, -1.5, 0);
-        scene.add(leftLeg);
-        scene.add(rightLeg);
-
-        // Set camera position
-        camera.position.z = 10;
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            head.rotation.y += 0.01;
-            body.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        // Adjust canvas size on window resize
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-        });
-        </script>
         <canvas id="spaceCanvas"></canvas>
     <script src="js/main.js"></script>
     <script src="js/json.js"></script>

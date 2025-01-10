@@ -7,3 +7,72 @@ canvas {
     height: 90%;
     z-index: -1;
 }
+canvas {
+    display: block;
+}
+
+
+
+.carousel-section {
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #3f3f3fa9;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 300px;
+    animation: fadeInButton 0.5s ease-in-out forwards;
+}
+.card{
+    width: 300px;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.295);
+    color: #00ff00;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInButton 0.5s ease-in-out forwards;
+    z-index: 100;
+}
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
