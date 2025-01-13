@@ -1,0 +1,100 @@
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-header {
+    position: relative;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  .card-btn {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .card-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #1e1e1ed5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ul-modal-content{
+    
+    text-align: left;
+  }
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .modal-content .technologies {
+    font-size: 14px;
+    color: #00d1b2;
+  }
+  
+  
