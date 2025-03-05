@@ -116,6 +116,12 @@
           <p>Site criado para a pesquisa de pokemons através de uma pokedex.</p>
           <button class="card-btn" onclick="showModal(4)">Ver Mais</button>
         </div>
+        <div class="project">
+          <h3>Projeto Aquario+</h3>
+          <img src="img/img-foody.png" alt="imagem de um site de vendas de produtos" width="500px">
+          <p>Site criado para a pesquisa de pokemons através de uma pokedex.</p>
+          <button class="card-btn" onclick="showModal(4)">Ver Mais</button>
+        </div>
       </article>
     </div>
   </section>
@@ -151,7 +157,7 @@
       </button>
       <h1>CBF Engenharia</h1>
       <div class="align-modal">
-      <a href="https://ellijr.github.io/CBFengenharia/" target="_blank" rel="noopener noreferrer">
+      <a href="https://cbfengenharia.vercel.app" target="_blank" rel="noopener noreferrer">
         <img src="img/img-CBFengenharia.png" alt="imagem de um site de engenharia" width="500px">
       </a>
         <div class="align-modal-under">        
@@ -168,6 +174,7 @@
     </div>
     </div>
   </div>
+
   <div id="modal-3" class="modal">
     <div class="modal-content"> 
       <h1>Pokédex</h1>
@@ -192,6 +199,7 @@
       </button>
     </div>
   </div>
+  
   <div id="modal-4" class="modal">
     <div class="modal-content">
       <h1>FoodyNow</h1>
@@ -215,6 +223,31 @@
         </button>
       </div>
   </div>
+  
+  <div id="modal-5" class="modal">
+    <div class="modal-content">
+      <h1>FoodyNow</h1>
+      <div class="aling-modal">        
+        <a href="https://foodynow.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img src="img/img-foody.png" alt="imagem de um site de vendas de produtos" width="400px">
+        </a>
+        <div class="align-modal-under">        
+          <p class="p-modal">Um site dedicado a experiências gastronômicas, com foco em explorar diferentes pratos e receitas. A interface é
+            moderna, com elementos visuais atraentes que destacam opções de comida e informações sobre cada prato.</p>
+            <p><strong>Tecnologias usadas:</strong></p>
+            <ul>
+              <li>HTML5: Para estruturar o conteúdo e organizar as seções.</li>
+              <li>CSS3: Para criar um design moderno e responsivo, com foco em uma experiência visual marcante.</li>
+              <li>JavaScript: Para tornar a interação do site fluida, com elementos dinâmicos e animações.</li>
+            </ul>
+          </div>
+        </div>
+        <button class="close-modal" onclick="closeModal(5)">
+          <a class="btn2"><span class="spn2"> Fechar</span></a>
+        </button>
+      </div>
+  </div>
+  
   <section id="disaines" class="disaines">
     <h1 class="text-desaines">Design</h1>
     <section class="carousel-section">
@@ -285,12 +318,19 @@
   </section>
   <footer>
     <div class="habilidades">
-      <h3>Minhas habilidades</h3>
-      <div class="habilidades2">
-        <a href="https://github.com/ElliJr"><img src="img-habilidades/img-html.png" alt="html" width="40px"></a>
-        <a href="https://github.com/ElliJr"><img src="img-habilidades/img-css.png" alt="css" width="37px"></a>
-        <a href="https://github.com/ElliJr"><img src="img-habilidades/img-javaScript.png" alt="js" width="40px"></a>
-        <a href="https://github.com/ElliJr"><img src="img-habilidades/Python.png" alt="js" width="40px"></a>
+      <button class="card-btn" onclick="showModal(9)">Mostrar minha Habilidades</button>
+      <div id="modal-9" class="modal">
+        <div class="modal-content">
+            <div class="habilidades2">
+              <a class="link-habilidades" href="https://github.com/ElliJr"><img src="img-habilidades/img-html.png" alt="html" width="40px"></a>
+              <a class="link-habilidades" href="https://github.com/ElliJr"><img src="img-habilidades/img-css.png" alt="css" width="37px"></a>
+              <a class="link-habilidades" href="https://github.com/ElliJr"><img src="img-habilidades/img-javaScript.png" alt="js" width="40px"></a>
+              <a class="link-habilidades" href="https://github.com/ElliJr"><img src="img-habilidades/Python.png" alt="js" width="40px"></a>
+            </div>
+            <button class="close-modal" onclick="closeModal(9)">
+              <a class="btn2"><span class="spn2"> Fechar</span></a>
+            </button>
+          </div>
       </div>
     </div>
     <div class="container">

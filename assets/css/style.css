@@ -70,6 +70,7 @@ footer{
   left: 10px;
   padding: 12px;
   display: flex;
+  justify-content: space-between;
 }
 .nome-autor, .subtitle{
     /* background-image: url("img2/156198-codigo_binario-nmero_binario-data-verde-patron-1366x768.jpg");
@@ -414,19 +415,19 @@ ul {
     color: #00ff00;
   }
 
-/*Estilo do objeto seguidor 
+/* Estilo do objeto seguidor 
 #follower {
-  /* position: fixed; Fixa o objeto para seguir o viewport */
-  /* width: 23px;
+  position: fixed;
+   width: 23px;
   height: 23px;
   z-index: 12;
-  background-color:rgba(0, 255, 0, 0.877); /* Verde neon 
-  border-radius: 50%;  Forma circular 
-  pointer-events: none; /* Evita interações com o objeto 
-  transform: translate(-50%, -50%); /* Centraliza no ponto do mouse 
-  transition: top 0.2s linear, left 0.2s linear; /* Suaviza o movimento com 1s de duração 
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00; /* Neon verde 
-}*/
+  background-color:rgba(0, 255, 0, 0.877);  
+  border-radius: 50%; 
+  pointer-events: none;
+  transform: translate(-50%, -50%);  
+  transition: top 0.2s linear, left 0.2s linear;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;  
+}  */
 
 #video-background {
   position: absolute;
