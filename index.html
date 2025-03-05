@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stat_minus_1" />
   <meta charset="UTF-8">
@@ -120,13 +121,12 @@
   </section>
   <div id="modal-1" class="modal">
     <div class="modal-content">
-      <button class="" onclick="closeModal(1)">
-        <a class="btn2"><span class="spn2"> Fechar</span></a>
-      </button>
       <h1>COFFE - Site</h1>
+      <div class="align-modal">        
       <a href="https://ellijr.github.io/COFFE--Site/" target="_blank" rel="noopener noreferrer">
         <img src="img/img-coffe.png" alt="imagem do site coffe" width="500px">
       </a>
+      <div class="align-modal-under">        
       <p>Um site focado em destacar os benefícios e a cultura do café, com um layout acolhedor e visual moderno. Ele
         oferece seções com informações sobre produtos ou serviços relacionados ao café, com uma estética envolvente que
         usa cores terrosas.</p>
@@ -138,66 +138,82 @@
       </ul>
     </div>
   </div>
+  <button class="close-modal" onclick="closeModal(1)">
+    <a class="btn2"><span class="spn2"> Fechar</span></a>
+  </button>
+</div>
+  </div>
 
   <div id="modal-2" class="modal">
     <div class="modal-content">
-      <button class="" onclick="closeModal(2)">
+      <button class="close-modal" onclick="closeModal(2)">
         <a class="btn2"><span class="spn2"> Fechar</span></a>
       </button>
       <h1>CBF Engenharia</h1>
+      <div class="align-modal">
       <a href="https://ellijr.github.io/CBFengenharia/" target="_blank" rel="noopener noreferrer">
         <img src="img/img-CBFengenharia.png" alt="imagem de um site de engenharia" width="500px">
       </a>
-      <p>Este site apresenta informações sobre a empresa CBF Engenharia, destacando seus serviços e valores. Com uma
-        estrutura limpa e profissional, o design transmite credibilidade e foco no setor de engenharia. A navegação é
-        simples e direta, permitindo que os visitantes encontrem informações relevantes sobre a empresa.</p>
-      <p><strong>Tecnologias usadas:</strong></p>
-      <ul>
-        <li>HTML5: Estrutura do site.</li>
-        <li>CSS3: Estilização, com ênfase em layout responsivo.</li>
-        <li>JavaScript: Adicionado para melhorar a interatividade e funcionalidades dinâmicas.</li>
-      </ul>
-
+        <div class="align-modal-under">        
+        <p>Este site apresenta informações sobre a empresa CBF Engenharia, destacando seus serviços e valores. Com uma
+          estrutura limpa e profissional, o design transmite credibilidade e foco no setor de engenharia. A navegação é
+          simples e direta, permitindo que os visitantes encontrem informações relevantes sobre a empresa.</p>
+          <p><strong>Tecnologias usadas:</strong></p>
+          <ul>
+            <li>HTML5: Estrutura do site.</li>
+            <li>CSS3: Estilização, com ênfase em layout responsivo.</li>
+            <li>JavaScript: Adicionado para melhorar a interatividade e funcionalidades dinâmicas.</li>
+          </ul>
+        </div>
+    </div>
     </div>
   </div>
   <div id="modal-3" class="modal">
-    <div class="modal-content">
-      <button class="" onclick="closeModal(3)">
+    <div class="modal-content"> 
+      <h1>Pokédex</h1>
+      <div class="aling-modal">
+        <a href="https://pokedex-three-wine.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img src="img/img-pokedex.PNG" alt="imagem de um site de pesquisa de pokemon" width="500px">
+        </a>
+        <div class="align-modal-under">        
+        <p>Uma aplicação interativa que lista e detalha Pokémon de forma dinâmica. O usuário pode navegar por uma lista
+          infinita de Pokémon e acessar detalhes como tipos, habilidades e estatísticas. O site traz uma experiência única
+          para os fãs, utilizando dados da PokéAPI para atualização em tempo real.</p>
+          <p><strong>Tecnologias usadas:</strong></p>
+          <ul>
+            <li>HTML5: Para estruturar os elementos da Pokédex.</li>
+            <li>CSS3: Para estilização com temas inspirados no universo Pokémon.</li>
+            <li>JavaScript: Para realizar requisições à PokéAPI e criar uma experiência de navegação dinâmica.</li>
+          </ul>
+        </div>
+      </div>
+      <button class="close-modal" onclick="closeModal(3)">
         <a class="btn2"><span class="spn2"> Fechar</span></a>
       </button>
-      <h1>Pokédex</h1>
-      <a href="https://pokedex-three-wine.vercel.app/" target="_blank" rel="noopener noreferrer">
-        <img src="img/img-pokedex.PNG" alt="imagem de um site de pesquisa de pokemon" width="500px">
-      </a>
-      <p>Uma aplicação interativa que lista e detalha Pokémon de forma dinâmica. O usuário pode navegar por uma lista
-        infinita de Pokémon e acessar detalhes como tipos, habilidades e estatísticas. O site traz uma experiência única
-        para os fãs, utilizando dados da PokéAPI para atualização em tempo real.</p>
-      <p><strong>Tecnologias usadas:</strong></p>
-      <ul>
-        <li>HTML5: Para estruturar os elementos da Pokédex.</li>
-        <li>CSS3: Para estilização com temas inspirados no universo Pokémon.</li>
-        <li>JavaScript: Para realizar requisições à PokéAPI e criar uma experiência de navegação dinâmica.</li>
-      </ul>
     </div>
   </div>
   <div id="modal-4" class="modal">
     <div class="modal-content">
-      <button class="" onclick="closeModal(4)">
-        <a class="btn2"><span class="spn2"> Fechar</span></a>
-      </button>
       <h1>FoodyNow</h1>
-      <a href="https://foodynow.vercel.app/" target="_blank" rel="noopener noreferrer">
-        <img src="img/img-foody.png" alt="imagem de um site de vendas de produtos" width="500px">
-      </a>
-      <p>Um site dedicado a experiências gastronômicas, com foco em explorar diferentes pratos e receitas. A interface é
-        moderna, com elementos visuais atraentes que destacam opções de comida e informações sobre cada prato.</p>
-        <p><strong>Tecnologias usadas:</strong></p>
-        <ul>
-        <li>HTML5: Para estruturar o conteúdo e organizar as seções.</li>
-        <li>CSS3: Para criar um design moderno e responsivo, com foco em uma experiência visual marcante.</li>
-        <li>JavaScript: Para tornar a interação do site fluida, com elementos dinâmicos e animações.</li>
-      </ul>
-    </div>
+      <div class="aling-modal">        
+        <a href="https://foodynow.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img src="img/img-foody.png" alt="imagem de um site de vendas de produtos" width="400px">
+        </a>
+        <div class="align-modal-under">        
+          <p class="p-modal">Um site dedicado a experiências gastronômicas, com foco em explorar diferentes pratos e receitas. A interface é
+            moderna, com elementos visuais atraentes que destacam opções de comida e informações sobre cada prato.</p>
+            <p><strong>Tecnologias usadas:</strong></p>
+            <ul>
+              <li>HTML5: Para estruturar o conteúdo e organizar as seções.</li>
+              <li>CSS3: Para criar um design moderno e responsivo, com foco em uma experiência visual marcante.</li>
+              <li>JavaScript: Para tornar a interação do site fluida, com elementos dinâmicos e animações.</li>
+            </ul>
+          </div>
+        </div>
+        <button class="close-modal" onclick="closeModal(4)">
+          <a class="btn2"><span class="spn2"> Fechar</span></a>
+        </button>
+      </div>
   </div>
   <section id="disaines" class="disaines">
     <h1 class="text-desaines">Design</h1>
@@ -283,15 +299,14 @@
     <button class="cssbuttons-io-button">
         <a href="certificado_backend/certificado.pdf" download="meu certificado">
         <span>Download</span>
-      </a>
+      </a>5.l
       </button>
   </footer>
   <canvas id="spaceCanvas"></canvas>
   <script src="js/main.js"></script>
   <script src="js/json.js"></script>
   <!-- <script src="js/scroll.js"></script> -->
-  <script src="js/balls.js"></script>
+  <script src="js/rosto.js"></script>
   <script src="js/topo.js"></script>
 </body>
-
 </html>

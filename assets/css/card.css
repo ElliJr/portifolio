@@ -97,4 +97,18 @@
     color: #00d1b2;
   }
   
-  
+  .aling-modal{
+    display: flex;
+    justify-content: space-around;
+  }
+  .aling-modal-under{
+    display: flex;
+  }
+  .p-modal{
+    overflow: hidden;
+    width: 400px;
+  }
+.close-modal{
+  position: relative;
+  top: 300px;
+}
