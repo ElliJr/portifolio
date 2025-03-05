@@ -15,7 +15,7 @@ function draw() {
     centroY = height / 2;
 
     // Rosto
-    fill("#03A9F4");
+    fill("#782419");
     circle(centroX, centroY, 300);
 
     // Olhos
@@ -30,7 +30,7 @@ function draw() {
 
     // Nariz
     noStroke();
-    fill("black");
+    fill("#9a4c3e");
     triangle(centroX, centroY - 20, centroX - 30, centroY + 20, centroX + 30, centroY + 20);
 
     // Sobrancelhas
