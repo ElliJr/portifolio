@@ -101,6 +101,9 @@ p {
     margin: 0 auto;
     padding: 2rem;
 }
+/* .container-text{
+  width: 200px;
+} */
 h3{
     font-family: "Itim", cursive;
     font-weight: 500;
@@ -126,7 +129,7 @@ h3{
 }
 .minha-imagem{
     height: 300px;
-    border-radius: 900%;
+    border-radius: 50%;
     position: relative;
     top: 10px transform 0.3s ease;
 }
@@ -247,13 +250,13 @@ img {
 /* Estilos existentes... */
 
 /* Responsividade - usando media queries */
-@media (max-width: 1200px) { /* Largura máxima de 1200px */
-    .container {
-      padding: 1rem; /* Reduz o padding da container */
-    }
+@media (max-width: 1024px) { /* Largura máxima de 1200px */
     .alinhar {
       flex-direction: column; /* Empilha os elementos verticalmente */
       align-items: center; /* Centraliza os itens */
+    }
+    .container-text{
+      width: 200px;
     }
     .profile-image {
       width: 300px;
