@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados de Programação - Neon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Variáveis CSS para o tema */
+        :root {
+            --neon-green: #39FF14; /* Um verde brilhante */
+            --dark-background: #1a1a1a; /* Preto muito escuro */
+            --darker-background: #0d0d0d; /* Ainda mais escuro para o corpo */
+            --light-gray-text: #e0e0e0; /* Texto claro para contraste */
+            --medium-gray-text: #b0b0b0; /* Texto secundário */
+            --input-border-focus: #5bff33; /* Borda do input ao focar */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--darker-background);
+            color: var(--light-gray-text); /* Cor do texto padrão */
+        }
+
+        /* Custom scrollbar for webkit browsers - Neon green */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark-background);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-green);
+            border-radius: 10px;
+            border: 1px solid rgba(57, 255, 20, 0.5); /* Borda sutil de neon */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--input-border-focus);
+            box-shadow: 0 0 5px var(--input-border-focus);
+        }
+
+        /* Estilos para o brilho neon e efeitos */
+        .neon-glow-border {
+            border: 1px solid rgba(57, 255, 20, 0.4);
+            box-shadow: 0 0 8px rgba(57, 255, 20, 0.6), inset 0 0 4px rgba(57, 255, 20, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .neon-glow-text {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green), 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+
+        .certificate-item:hover {
+            transform: scale(1.03); /* Leve aumento no hover */
+            box-shadow: 0 0 20px var(--neon-green), 0 0 10px rgba(57, 255, 20, 0.7); /* Brilho mais intenso */
+        }
+
+        /* Ajustes específicos para o input */
+        #filterInput {
+            background-color: var(--dark-background);
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+        }
+
+        #filterInput::placeholder {
+            color: rgba(57, 255, 20, 0.6); /* Cor do placeholder */
+        }
+
+        #filterInput:focus {
+            outline: none;
+            border-color: var(--input-border-focus);
+            box-shadow: 0 0 12px var(--input-border-focus), 0 0 8px rgba(57, 255, 20, 0.7);
+        }
+
+        /* Cor do ícone de busca */
+        .search-icon {
+            color: var(--neon-green);
+            filter: drop-shadow(0 0 3px rgba(57, 255, 20, 0.5));
+        }
+
+        /* Estilo dos cards de certificado */
+        .certificate-item {
+            background-color: var(--dark-background);
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            color: var(--light-gray-text);
+        }
+
+        .certificate-item h3 {
+            color: var(--neon-green);
+        }
+
+        .certificate-item p {
+            color: var(--medium-gray-text);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl w-full bg-dark-background p-6 sm:p-8 rounded-lg shadow-xl border border-gray-800 neon-glow-border">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-6 neon-glow-text">Meus Certificados</h1>
+        <p class="text-center mb-8 text-light-gray-text">
+            Digite uma linguagem de programação para filtrar os certificados (ex: Python, JavaScript, React, HTML).
+        </p>
+
+        <div class="mb-8 relative">
+            <input
+                type="text"
+                id="filterInput"
+                placeholder="Filtrar por linguagem..."
+                class="w-full px-5 py-3 pr-10 rounded-md shadow-sm text-base sm:text-lg"
+            />
+            <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </div>
+
+        <div id="certificatesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Certificados serão carregados aqui -->
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+Python" alt="Certificado Python Fundamentos"
+                    data-languages="python,fundamentos,backend"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">Python: Fundamentos Essenciais</h3>
+                    <p class="text-sm">Conclusão do curso de fundamentos em Python.</p>
+                </div>
+            </div>
+
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+JavaScript" alt="Certificado JavaScript Avançado"
+                    data-languages="javascript,frontend,web"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">JavaScript: Desenvolvimento Web</h3>
+                    <p class="text-sm">Domínio de conceitos avançados de JavaScript para web.</p>
+                </div>
+            </div>
+
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+React" alt="Certificado React Native"
+                    data-languages="react native,mobile,javascript"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">React Native: Mobile Apps</h3>
+                    <p class="text-sm">Criação de aplicativos móveis com React Native.</p>
+                </div>
+            </div>
+
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+HTML+CSS" alt="Certificado HTML CSS"
+                    data-languages="html,css,frontend,design,web"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">HTML e CSS: Design Responsivo</h3>
+                    <p class="text-sm">Construção de interfaces web responsivas e modernas.</p>
+                </div>
+            </div>
+
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+Node.js" alt="Certificado Node.js"
+                    data-languages="node.js,backend,javascript"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">Node.js: APIs RESTful</h3>
+                    <p class="text-sm">Desenvolvimento de APIs robustas com Node.js.</p>
+                </div>
+            </div>
+
+            <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+SQL" alt="Certificado SQL"
+                    data-languages="sql,banco de dados,database"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">SQL: Gerenciamento de Dados</h3>
+                    <p class="text-sm">Manipulação e consulta de dados em bancos relacionais.</p>
+                </div>
+            </div>
+           <div class="certificate-item rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/101010/39FF14?text=Certificado+Excel " alt="Certificado SQL"
+                    data-languages="Excel"
+                    class="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1">SQL: Gerenciamento de Dados</h3>
+                    <p class="text-sm">Manipulação e consulta de dados em bancos relacionais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterInput = document.getElementById('filterInput');
+            const certificatesContainer = document.getElementById('certificatesContainer');
+            const certificateItems = certificatesContainer.getElementsByClassName('certificate-item');
+
+            const filterCertificates = () => {
+                const filterText = filterInput.value.toLowerCase().trim();
+
+                Array.from(certificateItems).forEach(item => {
+                    const imgElement = item.querySelector('img');
+                    const languages = imgElement ? imgElement.dataset.languages.toLowerCase() : '';
+
+                    if (languages.includes(filterText) || filterText === '') {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            };
+
+            filterInput.addEventListener('input', filterCertificates);
+        });
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@ html ::-webkit-scrollbar {
 
 html ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #0f0;;
+  background: rgb(10, 65, 10);;
 }
 
 html ::-webkit-scrollbar-track {
@@ -131,7 +131,7 @@ h3{
     height: 300px;
     border-radius: 50%;
     position: relative;
-    top: 10px transform 0.3s ease;
+
 }
 img{
     border-radius: 12px;

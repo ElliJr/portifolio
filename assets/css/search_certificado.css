@@ -1,0 +1,89 @@
+  /* Variáveis CSS para o tema */
+        :root {
+            --neon-green: #39FF14; /* Um verde brilhante */
+            --dark-background: #1a1a1a; /* Preto muito escuro */
+            --darker-background: #0d0d0d; /* Ainda mais escuro para o corpo */
+            --light-gray-text: #e0e0e0; /* Texto claro para contraste */
+            --medium-gray-text: #b0b0b0; /* Texto secundário */
+            --input-border-focus: #5bff33; /* Borda do input ao focar */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--darker-background);
+            color: var(--light-gray-text); /* Cor do texto padrão */
+        }
+
+        /* Custom scrollbar for webkit browsers - Neon green */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark-background);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-green);
+            border-radius: 10px;
+            border: 1px solid rgba(57, 255, 20, 0.5); /* Borda sutil de neon */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--input-border-focus);
+            box-shadow: 0 0 5px var(--input-border-focus);
+        }
+
+        /* Estilos para o brilho neon e efeitos */
+        .neon-glow-border {
+            border: 1px solid rgba(57, 255, 20, 0.4);
+            box-shadow: 0 0 8px rgba(57, 255, 20, 0.6), inset 0 0 4px rgba(57, 255, 20, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .neon-glow-text {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green), 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+
+        .certificate-item:hover {
+            transform: scale(1.03); /* Leve aumento no hover */
+            box-shadow: 0 0 20px var(--neon-green), 0 0 10px rgba(57, 255, 20, 0.7); /* Brilho mais intenso */
+        }
+
+        /* Ajustes específicos para o input */
+        #filterInput {
+            background-color: var(--dark-background);
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+        }
+
+        #filterInput::placeholder {
+            color: rgba(57, 255, 20, 0.6); /* Cor do placeholder */
+        }
+
+        #filterInput:focus {
+            outline: none;
+            border-color: var(--input-border-focus);
+            box-shadow: 0 0 12px var(--input-border-focus), 0 0 8px rgba(57, 255, 20, 0.7);
+        }
+
+        /* Cor do ícone de busca */
+        .search-icon {
+            color: var(--neon-green);
+            filter: drop-shadow(0 0 3px rgba(57, 255, 20, 0.5));
+        }
+
+        /* Estilo dos cards de certificado */
+        .certificate-item {
+            background-color: var(--dark-background);
+            border: 1px solid rgba(57, 255, 20, 0.2);
+            color: var(--light-gray-text);
+        }
+
+        .certificate-item h3 {
+            color: var(--neon-green);
+        }
+
+        .certificate-item p {
+            color: var(--medium-gray-text);
+        }

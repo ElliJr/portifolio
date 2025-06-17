@@ -1,0 +1,37 @@
+  /* ***************************************************
+    CSS ATUALIZADO PARA A ANIMAÇÃO DE APARECER/SUMIR
+    ***************************************************
+    */
+    .flex-projects {
+        /* Garante que o conteúdo não transborde durante a transição de altura */
+        overflow: hidden; 
+        /* Define a altura máxima inicial e opacidade para quando estiver visível */
+        max-height: 2000px; /* Um valor grande o suficiente para a altura máxima dos seus projetos */
+        opacity: 1;
+        /* Adiciona a transição suave para as propriedades que queremos animar */
+        transition: max-height 0.7s ease-out, opacity 0.7s ease-out; /* Ajuste o tempo conforme desejar */
+    }
+
+    .flex-projects.hidden {
+        max-height: 0; /* Esconde o conteúdo "colapsando" a altura */
+        opacity: 0; /* Esconde o conteúdo tornando-o transparente */
+        /* display: none;  Removido, pois impede a transição */
+        pointer-events: none; /* Impede cliques em elementos invisíveis */
+    }
+
+    .toggle-projects-btn {
+        display: block; /* Garante que o botão ocupe sua própria linha */
+        margin: 20px auto; /* Centraliza o botão */
+        padding: 10px 20px;
+        background-color: #007bff; /* Cor de fundo do botão */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .toggle-projects-btn:hover {
+        background-color: #0056b3;
+    }
