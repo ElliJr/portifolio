@@ -4,8 +4,8 @@
         const projectsContainer = document.querySelector('.flex-projects');
 
         // Opcional: Para começar com os projetos escondidos e com a animação suave
-        // projectsContainer.classList.add('hidden'); 
-        // toggleButton.textContent = 'Mostrar todos os projetos';
+        projectsContainer.classList.add('hidden'); 
+        toggleButton.textContent = 'Mostrar todos os projetos';
 
         toggleButton.addEventListener('click', function() {
             if (projectsContainer.classList.contains('hidden')) {
