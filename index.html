@@ -5,173 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Elli Junior | Dev Portfolio</title>
+    <title>Elli Junior | Dev & Athlete</title>
     <style>
-        body { background-color: #050505; color: #e5e7eb; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { 
+            background-color: #050505; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif;
+        }
         .glass-nav { background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px; }
-        .modal.active { display: flex; }
-        .project-hidden { display: none; }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-bg { background: radial-gradient(circle at 20% 30%, #1e1e1e 0%, #050505 100%); }
+        .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; padding: 20px; }
+        .modal.active { display: flex; }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
 
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-black text-white tracking-tighter">ELLI<span class="text-blue-500">.</span></h1>
-            <ul class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <h1 class="text-xl font-black text-white tracking-tighter italic">ELLI<span class="text-blue-500">.</span></h1>
+            <ul class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
                 <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
                 <li><a href="#projetos" class="hover:text-blue-400 transition">Projetos</a></li>
-                <li><a href="#certificado" class="hover:text-blue-400 transition">Certificados</a></li>
                 <li><a href="#contato" class="hover:text-blue-400 transition">Contato</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="topo" class="min-h-screen flex items-center justify-center text-center px-6">
-        <div>
-            <p class="text-blue-500 font-mono text-sm mb-4 tracking-[0.4em]">FULLSTACK DEVELOPER</p>
-            <h1 class="text-6xl md:text-8xl font-black text-white mb-6">Elli <span class="gradient-text">Junior</span></h1>
-            <a href="#projetos" class="inline-block bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-blue-500 hover:text-white transition-all">Ver Projetos</a>
+    <header id="topo" class="min-h-screen flex items-center justify-center px-6 hero-bg">
+        <div class="max-w-4xl text-center space-y-6">
+            <div class="inline-block px-4 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-500 text-[10px] font-bold tracking-widest uppercase">
+                18 anos • Dev Fullstack • Bodybuilding Enthusiast
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black text-white tracking-tighter leading-none">
+                BUILD <span class="gradient-text">SYSTEMS</span><br>LIFT HEAVY.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Focado em arquitetura de software e hipertrofia. Transformo café e treino pesado em código de alta performance. 
+            </p>
+            <div class="pt-8 flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="bg-white text-black px-10 py-4 rounded-full font-black hover:bg-blue-500 hover:text-white transition-all transform hover:-translate-y-1">
+                    VER PROJETOS
+                </a>
+                <a href="https://instagram.com/elli.kun/" target="_blank" class="px-10 py-4 rounded-full border border-white/10 font-bold hover:bg-white/5 transition">
+                    INSTAGRAM
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="projetos" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-white mb-12 italic uppercase tracking-tighter">Projetos Recentes</h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectGrid">
-            <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl group hover:border-blue-500/50 transition">
-                <img src="https://placehold.co/600x400/111/3b82f6?text=Coffe+Site" class="rounded-xl mb-4 w-full aspect-video object-cover">
-                <h3 class="text-xl font-bold text-white mb-2">Projeto COFFE</h3>
-                <p class="text-gray-400 text-sm mb-6">Interface moderna para cafeteria com foco em UI/UX.</p>
-                <button onclick="openModal('modal-1')" class="w-full py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">Detalhes</button>
+    <section id="sobre" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-black text-white italic uppercase tracking-tighter">Quem é o Elli?</h2>
+                <div class="space-y-4 text-gray-400 leading-relaxed">
+                    <p>Tenho 18 anos e acredito que a disciplina do **bodybuilding** é o que me torna um desenvolvedor melhor. Se eu consigo manter a constância na dieta e no treino, consigo resolver qualquer bug complexo.</p>
+                    <p>Especialista em criar soluções SaaS e aplicativos mobile, unindo estética premium com backend sólido.</p>
+                </div>
+                <div class="flex gap-4 pt-4">
+                    <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl flex-1 text-center group hover:border-blue-500 transition">
+                        <span class="block text-3xl font-black text-white group-hover:text-blue-500 transition">112<span class="text-sm">kg</span></span>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Meta Bulking</span>
+                    </div>
+                    <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl flex-1 text-center group hover:border-blue-500 transition">
+                        <span class="block text-3xl font-black text-white group-hover:text-blue-500 transition">3+</span>
+                        <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Anos Codando</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl group hover:border-blue-500/50 transition">
-                <img src="https://placehold.co/600x400/111/3b82f6?text=CBF+Engenharia" class="rounded-xl mb-4 w-full aspect-video object-cover">
-                <h3 class="text-xl font-bold text-white mb-2">CBF Engenharia</h3>
-                <p class="text-gray-400 text-sm mb-6">Landing page corporativa para empresa de engenharia civil.</p>
-                <button onclick="openModal('modal-2')" class="w-full py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">Detalhes</button>
+            <div class="bg-zinc-900 aspect-square rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center relative">
+                <img src="img/seu-perfil.jpg" alt="Elli Junior" class="w-full h-full object-cover opacity-50">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white/20 text-8xl font-black italic select-none">ATHLETE</span>
+                </div>
             </div>
-
-            <div class="bg-zinc-900 border border-white/5 p-6 rounded-2xl project-hidden">
-                <img src="https://placehold.co/600x400/111/3b82f6?text=Pokedex" class="rounded-xl mb-4 w-full aspect-video object-cover">
-                <h3 class="text-xl font-bold text-white mb-2">Pokédex API</h3>
-                <p class="text-gray-400 text-sm mb-6">Consumo de API REST para listagem dinâmica de Pokémon.</p>
-                <button onclick="openModal('modal-3')" class="w-full py-2 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">Detalhes</button>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center">
-            <button id="toggleProjectsBtn" class="text-blue-500 font-bold uppercase text-xs tracking-widest hover:underline">
-                Mostrar Mais Projetos
-            </button>
         </div>
     </section>
 
-    <section id="certificado" class="py-24 px-6 bg-zinc-950">
+    <section id="projetos" class="py-24 px-6 bg-zinc-950/50 border-y border-white/5">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-8">Certificações</h2>
-            <input type="text" id="filterInput" placeholder="Filtrar (ex: Python, React...)" class="w-full md:w-1/3 bg-white/5 border border-white/10 px-6 py-3 rounded-xl focus:border-blue-500 outline-none mb-12">
+            <h2 class="text-3xl font-black text-white mb-12 italic uppercase tracking-tighter">Projetos em Destaque</h2>
             
-            <div id="certificatesContainer" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="cert-item bg-zinc-900 p-4 rounded-xl border border-white/5" data-languages="python backend">
-                    <p class="text-blue-500 font-mono text-[10px] mb-2">PYTHON</p>
-                    <h4 class="font-bold text-white">Python: APIs REST</h4>
+            <div class="relative group mb-12">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div class="relative bg-zinc-900 rounded-3xl border border-white/10 p-8 md:p-12 overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <span class="text-blue-500 font-mono text-xs font-bold tracking-[0.3em] uppercase">SaaS Principal</span>
+                            <h3 class="text-4xl md:text-5xl font-black text-white">Agenda Fácil</h3>
+                            <p class="text-gray-400 text-lg leading-relaxed">
+                                A revolução na gestão para autônomos. Sistema completo de agendamento, fluxo de caixa e gestão de estoque para barbeiros, mecânicos e profissionais liberais.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white/5 rounded-md text-[10px] font-bold border border-white/10 uppercase">React Native</span>
+                                <span class="px-3 py-1 bg-white/5 rounded-md text-[10px] font-bold border border-white/10 uppercase">Firebase</span>
+                                <span class="px-3 py-1 bg-white/5 rounded-md text-[10px] font-bold border border-white/10 uppercase">Node.js</span>
+                            </div>
+                            <button onclick="openModal('modal-agenda')" class="mt-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-bold transition">Conhecer o Projeto</button>
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition duration-500">
+                            <img src="img/agenda-facil-mockup.png" alt="Agenda Fácil" class="w-full">
+                        </div>
+                    </div>
                 </div>
-                <div class="cert-item bg-zinc-900 p-4 rounded-xl border border-white/5" data-languages="javascript react mobile">
-                    <p class="text-blue-500 font-mono text-[10px] mb-2">REACT NATIVE</p>
-                    <h4 class="font-bold text-white">Mobile Development</h4>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-zinc-900/50 border border-white/5 p-6 rounded-2xl hover:border-blue-500/30 transition">
+                    <h4 class="text-lg font-bold text-white mb-2 italic uppercase">GenesysFit</h4>
+                    <p class="text-gray-500 text-sm mb-4">Treinador com IA integrado ao Firebase para rotinas de hipertrofia.</p>
+                </div>
+                <div class="bg-zinc-900/50 border border-white/5 p-6 rounded-2xl hover:border-blue-500/30 transition">
+                    <h4 class="text-lg font-bold text-white mb-2 italic uppercase">Bulking Tracker</h4>
+                    <p class="text-gray-500 text-sm mb-4">Monitoramento de peso e tarefas para ganho de massa muscular.</p>
+                </div>
+                <div class="bg-zinc-900/50 border border-white/5 p-6 rounded-2xl hover:border-blue-500/30 transition">
+                    <h4 class="text-lg font-bold text-white mb-2 italic uppercase">White Hat API</h4>
+                    <p class="text-gray-500 text-sm mb-4">Projeto focado em segurança de dados e autenticação robusta.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center">
-        <button onclick="openModal('modal-skills')" class="mb-8 px-6 py-2 bg-white/5 rounded-full border border-white/10 hover:bg-blue-500 transition font-bold text-xs">MINHAS HABILIDADES</button>
-        <p class="text-zinc-600 text-xs uppercase tracking-widest">© 2026 Elli Junior — Built to Scale</p>
-    </footer>
-
-    <div id="modal-1" class="modal">
-        <div class="bg-zinc-900 max-w-2xl w-full p-8 rounded-3xl border border-white/10 relative">
-            <button onclick="closeModal('modal-1')" class="absolute top-6 right-6 text-zinc-500">Fechar [X]</button>
-            <h2 class="text-2xl font-bold text-white mb-4">Projeto COFFE</h2>
-            <p class="text-gray-400 mb-6">Estrutura completa em HTML5, CSS3 e animações em JavaScript. Layout focado na experiência do usuário e conversão.</p>
-            <a href="#" class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-bold">Acessar Repositório</a>
+    <section id="contato" class="py-24 px-6 text-center">
+        <h2 class="text-3xl font-black text-white italic uppercase mb-8">Vamos construir algo sólido?</h2>
+        <div class="flex justify-center gap-6">
+            <a href="mailto:ellijuniorsantosdejesus@gmail.com" class="text-gray-400 hover:text-white transition text-sm font-bold uppercase tracking-widest">Email</a>
+            <a href="https://github.com/ElliJr" class="text-gray-400 hover:text-white transition text-sm font-bold uppercase tracking-widest">GitHub</a>
+            <a href="https://linkedin.com/in/elli-junior-3a37622b8/" class="text-gray-400 hover:text-white transition text-sm font-bold uppercase tracking-widest">LinkedIn</a>
         </div>
-    </div>
+        <p class="mt-20 text-[10px] text-zinc-700 uppercase font-black tracking-[0.5em]">© 2026 ELLI JUNIOR | NO PAIN NO CODE</p>
+    </section>
 
-    <div id="modal-skills" class="modal">
-        <div class="bg-zinc-900 max-w-md w-full p-8 rounded-3xl border border-white/10 text-center">
-            <h2 class="text-2xl font-bold text-white mb-6">Tech Arsenal</h2>
-            <div class="grid grid-cols-2 gap-4 text-sm font-mono">
-                <div class="p-3 bg-white/5 rounded-lg border border-white/5">REACT NATIVE</div>
-                <div class="p-3 bg-white/5 rounded-lg border border-white/5">PYTHON</div>
-                <div class="p-3 bg-white/5 rounded-lg border border-white/5">FIREBASE</div>
-                <div class="p-3 bg-white/5 rounded-lg border border-white/5">NODE.JS</div>
+    <div id="modal-agenda" class="modal">
+        <div class="bg-zinc-900 max-w-4xl w-full p-8 md:p-12 rounded-[2rem] border border-white/10 relative overflow-y-auto max-h-[90vh]">
+            <button onclick="closeModal('modal-agenda')" class="absolute top-8 right-8 text-zinc-500 hover:text-white font-bold">FECHAR [X]</button>
+            <h2 class="text-4xl font-black text-white italic mb-6">AGENDA FÁCIL</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4 text-gray-400">
+                    <p>O **Agenda Fácil** nasceu da necessidade de organizar a vida do profissional autônomo. É um SaaS completo que resolve:</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Agendamento inteligente (evita furos)</li>
+                        <li>Controle de estoque de produtos</li>
+                        <li>Relatórios de fluxo de caixa em tempo real</li>
+                        <li>Pitch de vendas e marketing integrado</li>
+                    </ul>
+                    <p class="text-white font-bold">Stack: React Native para Mobile e Firebase para o Realtime DB.</p>
+                </div>
+                <div class="bg-black/50 rounded-xl p-4 border border-white/5">
+                    <img src="img/agenda-demo.gif" alt="Demo" class="rounded-lg">
+                </div>
             </div>
-            <button onclick="closeModal('modal-skills')" class="mt-8 text-blue-500 text-xs font-bold uppercase tracking-widest">Fechar</button>
         </div>
     </div>
 
     <script>
-        // 1. Sistema de Modais
         function openModal(id) {
             document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden'; // Trava o scroll
+            document.body.style.overflow = 'hidden';
         }
-
         function closeModal(id) {
             document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = 'auto'; // Destrava o scroll
+            document.body.style.overflow = 'auto';
         }
 
-        // Fechar modal ao clicar fora dele
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('active');
+        // Fechar no ESC
+        document.addEventListener('keydown', (e) => {
+            if(e.key === "Escape") {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(m => m.classList.remove('active'));
                 document.body.style.overflow = 'auto';
             }
-        }
-
-        // 2. Mostrar/Esconder Projetos
-        const toggleBtn = document.getElementById('toggleProjectsBtn');
-        const hiddenProjects = document.querySelectorAll('.project-hidden');
-        let isShowing = false;
-
-        toggleBtn.addEventListener('click', () => {
-            isShowing = !isShowing;
-            hiddenProjects.forEach(p => {
-                p.style.display = isShowing ? 'block' : 'none';
-            });
-            toggleBtn.innerText = isShowing ? 'Mostrar Menos' : 'Mostrar Mais Projetos';
-        });
-
-        // 3. Filtro de Certificados
-        const filterInput = document.getElementById('filterInput');
-        const certItems = document.querySelectorAll('.cert-item');
-
-        filterInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            certItems.forEach(item => {
-                const languages = item.getAttribute('data-languages').toLowerCase();
-                if (languages.includes(term)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-
-        // 4. Smooth Scroll para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
         });
     </script>
 </body>
